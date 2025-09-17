@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happiest 1st month anniversary ❤️</title>
+
+  <!-- Prevent reader-mode-like layout & make responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* ---------- Page basics (lavender theme) ---------- */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f3e8ff, #e0d4ff); /* soft lavender gradient */
+      text-align: center;
+      overflow-y: auto; /* allow scrolling for long text */
+      position: relative;
+      color: #2b2233;
+    }
+
+    /* faded centered background image (optional) */
+    .bg-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.12; /* very subtle fade */
+      z-index: 0;
+      max-width: 80%;
+      height: auto;
+      pointer-events: none;
+    }
+
+    h1 {
+      margin-top: 36px;
+      font-size: 2.6rem;
+      color: #5a2d7e; /* lavender/dark accent */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- Gallery & images ---------- */
+    .gallery img {
+      width: 220px;
+      max-width: 90%;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(66,18,122,0.12);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      z-index: 1;
+      height: auto;
+      display: inline-block;
+    }
+    .gallery img:hover { transform: scale(1.03); box-shadow: 0 10px 22px rgba(66,18,122,0.16); }
+
+    /* ---------- Falling petals (lavender hearts) ---------- */
+    .petal {
+      position: absolute;
+      top: -40px;
+      font-size: 1.6rem;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0.95;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+    }
+
+    /* ---------- Play button (heartbeat) ---------- */
+    #play-btn {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 26px;
+      background: linear-gradient(90deg,#9b59ff,#7b2cbf);
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(123,44,191,0.18);
+      position: relative;
+      z-index: 1;
+      animation: heartbeat 1.6s infinite;
+    }
+    #play-btn:hover { transform: scale(1.04); }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      20% { transform: scale(1.14); }
+      40% { transform: scale(1); }
+      60% { transform: scale(1.14); }
+      100% { transform: scale(1); }
+    }
+
+    /* ---------- Paragraphs & responsiveness ---------- */
+    p {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 14px auto;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      padding: 0 14px; /* mobile gutter */
+      color: #2b2233;
+    }
+
+    /* small decorative divider for spacing before pics */
+    .spacer { height: 10px; }
+
+    /* ---------- Signature bottom-right of page content ---------- */
+    .signature {
+      text-align: right;
+      margin-right: 20px;
+      margin-top: 36px;
+      font-size: 1.02em;
+      font-style: italic;
+      color: #5a2d7e;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ensure images & content do not trigger overflow horizontally */
+    img, button { max-width: 100%; box-sizing: border-box; }
+
+    /* small screens: slightly reduce heading size */
+    @media (max-width: 420px) {
+      h1 { font-size: 1.9rem; margin-top: 24px; }
+      .gallery img { width: 180px; }
+      p { font-size: 1rem; padding: 0 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- optional faded background image (put lavender-themed image named bg.png in repo) -->
+  <img src="bg.png" alt="Lavender background" class="bg-image">
+
+  <h1>Happiest 1st month anniversary ❤️</h1>
+
+  <!-- Music control button (play / pause) -->
+  <div style="text-align:center; margin: 12px 0; position: relative; z-index:1;">
+    <button id="play-btn">🎵 Play Song</button>
+  </div>
+
+  <!-- first paragraph (as provided) -->
+  <p>
+    Since we started dating from then till now I am still not able to process that you’re mine now💝…Tu meri zindagi ka sabse khoobsurat pal hai jise me hamesha yaad rakhna chahta hu tu sweetest haii yrrr tujhse jyada cute, loveing, adorable insaan kahan milega mujhe🎗️meri zindagi ki ye first relationship hai and aakhri bhi kyuki me abb tera sath kabhi nhi chodhungaa🌹tujhe hamesha apne sath dekhna chahta hu tune mujhe us tarah treat kra hai jis tarah mene kabhi socha nhi tha ki mujhe koi treat krega but tu sabse alag nikli tune mujhe samjha tujhe pta tha me confess nhi kr paunga isliye tune samne se confess kr diya tune mujhe firse pyaar krna sikha diyaaa cause mene socha nhi tha ki pehle jo hua uske baad me kabhi firse khudko pyaar me padne dunga but you proved me wrong…you’re the best girlfriend 🩷 teri har cheez mujhse pasand hai tera accent tera new new words bolna and tera shocking wala face
+  </p>
+
+  <!-- spacer, then two pictures area (placeholders: pic1.jpg & pic2.jpg) -->
+  <div class="spacer"></div>
+  <div class="gallery" aria-label="two-pictures">
+    <img src="pic1.jpg" alt="Memory 1">
+    <img src="pic2.jpg" alt="Memory 2">
+  </div>
+
+  <!-- second paragraph -->
+  <p>
+    Teri aankhein the most prettiest I have ever seen✨🪐 and tere baal jo tujhe aur bhi pretty banate hai…me tujhe kitna chahta hu ye toh bhagwan ji bhi jante haiii tu bas meri banke rheee ye hi ek prayer hai..is ek month me itna toh jaan gya hu ki tu meri khaamiyon ko bhi samjhti hai and uske liye kabhi bola bhi nhi hai tune mujhseee..tujhse milke meri life complete ho gyiii haii..you complete me❤️‍🩹 tujhse me bhot haddd jyada ekdam shiddat wala pyaar krta hu..and hamesha krunga and hamesha tujhe best treat krungaa cause you’re the only person I love the mostt ❣️
+  </p>
+
+  <!-- closing small line -->
+  <p style="margin-top: 6px; font-weight:600;">I love you cheshtha❤️ and once againn HAPPIEST 1st MONTH ANNIVERSARY cutiee🌸🌷</p>
+
+  <!-- signature at end (bottom-right of page content) -->
+  <p class="signature">From your most loving bf</p>
+
+  <!-- audio file (place song as song.mp3 in repo) -->
+  <audio id="bg-music" loop style="display:none;">
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    /***** Play/pause button logic (works on mobile after user interacts) *****/
+    const playBtn = document.getElementById('play-btn');
+    const music = document.getElementById('bg-music');
+
+    playBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(()=>{/* autoplay blocked in some cases; user initiated click should work */});
+        playBtn.innerText = '🔇 Pause Song';
+      } else {
+        music.pause();
+        playBtn.innerText = '🎵 Play Song';
+      }
+    });
+
+    /***** Falling lavender petals (purple hearts) across whole document height *****/
+    function createPetal() {
+      const pet = document.createElement('div');
+      pet.className = 'petal';
+      // use a small purple heart or flower emoji for soft effect
+      pet.textContent = '💟'; // purple decorative heart; change to '💜' or '🌸' if you prefer
+      // horizontal position
+      pet.style.left = Math.random() * 100 + 'vw';
+
+      // random size & opacity for variety
+      const scale = 0.9 + Math.random() * 0.9;
+      pet.style.fontSize = (14 * scale) + 'px';
+      pet.style.opacity = (0.6 + Math.random() * 0.4);
+
+      // duration
+      const duration = 3000 + Math.random() * 4200; // ms
+
+      // total page height (so petals fall full page)
+      const pageHeight = document.documentElement.scrollHeight + 200;
+
+      // use Web Animations API for full-page fall
+      pet.animate(
+        [
+          { transform: 'translateY(0px)', opacity: pet.style.opacity },
+          { transform: `translateY(${pageHeight}px)`, opacity: 0 }
+        ],
+        {
+          duration: duration,
+          easing: 'linear',
+          fill: 'forwards'
+        }
+      );
+
+      document.body.appendChild(pet);
+
+      // remove after animation
+      setTimeout(()=> pet.remove(), duration + 100);
+    }
+
+    // create petals periodically, slower cadence for subtlety
+    setInterval(createPetal, 900);
+
+    // small precaution: re-calc pageHeight periodically (if content grows)
+    // not strictly necessary but keeps animation accurate if user scrolls/loads images
+    window.addEventListener('resize', ()=>{/* layout responds automatically */});
+  </script>
+</body>
+</html>
