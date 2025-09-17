@@ -7,6 +7,9 @@
   <!-- Prevent reader-mode-like layout & make responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 🎀 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
   <style>
     /* ---------- Page basics (lavender theme) ---------- */
     body {
@@ -38,6 +41,7 @@
       color: #5a2d7e; /* lavender/dark accent */
       position: relative;
       z-index: 1;
+      font-family: 'Dancing Script', cursive; /* 🎀 new font only for heading */
     }
 
     /* ---------- Gallery & images ---------- */
@@ -115,6 +119,7 @@
       color: #5a2d7e;
       position: relative;
       z-index: 1;
+      font-family: 'Dancing Script', cursive; /* 🎀 optional: also in cursive */
     }
 
     /* ensure images & content do not trigger overflow horizontally */
@@ -129,104 +134,4 @@
   </style>
 </head>
 <body>
-
-  <!-- optional faded background image (put lavender-themed image named bg.png in repo) -->
-  <img src="bg.png" alt="Lavender background" class="bg-image">
-
-  <h1>Happiest 1st month anniversary ❤️</h1>
-
-  <!-- Music control button (play / pause) -->
-  <div style="text-align:center; margin: 12px 0; position: relative; z-index:1;">
-    <button id="play-btn">🎵 Play Song</button>
-  </div>
-
-  <!-- first paragraph (as provided) -->
-  <p>
-    Since we started dating from then till now I am still not able to process that you’re mine now💝…Tu meri zindagi ka sabse khoobsurat pal hai jise me hamesha yaad rakhna chahta hu tu sweetest haii yrrr tujhse jyada cute, loveing, adorable insaan kahan milega mujhe🎗️meri zindagi ki ye first relationship hai and aakhri bhi kyuki me abb tera sath kabhi nhi chodhungaa🌹tujhe hamesha apne sath dekhna chahta hu tune mujhe us tarah treat kra hai jis tarah mene kabhi socha nhi tha ki mujhe koi treat krega but tu sabse alag nikli tune mujhe samjha tujhe pta tha me confess nhi kr paunga isliye tune samne se confess kr diya tune mujhe firse pyaar krna sikha diyaaa cause mene socha nhi tha ki pehle jo hua uske baad me kabhi firse khudko pyaar me padne dunga but you proved me wrong…you’re the best girlfriend 🩷 teri har cheez mujhse pasand hai tera accent tera new new words bolna and tera shocking wala face
-  </p>
-
-  <!-- spacer, then two pictures area (placeholders: pic1.jpg & pic2.jpg) -->
-  <div class="spacer"></div>
-  <div class="gallery" aria-label="two-pictures">
-    <img src="pic1.png" alt="Memory 1">
-  </div>
-
-  <!-- second paragraph -->
-  <p>
-    Teri aankhein the most prettiest I have ever seen✨🪐 and tere baal jo tujhe aur bhi pretty banate hai…me tujhe kitna chahta hu ye toh bhagwan ji bhi jante haiii tu bas meri banke rheee ye hi ek prayer hai..is ek month me itna toh jaan gya hu ki tu meri khaamiyon ko bhi samjhti hai and uske liye kabhi bola bhi nhi hai tune mujhseee..tujhse milke meri life complete ho gyiii haii..you complete me❤️‍🩹 tujhse me bhot haddd jyada ekdam shiddat wala pyaar krta hu..and hamesha krunga and hamesha tujhe best treat krungaa cause you’re the only person I love the mostt ❣️
-  </p>
-
-  <!-- closing small line -->
-  <p style="margin-top: 6px; font-weight:600;">I love you cheshtha❤️ and once againn HAPPIEST 1st MONTH ANNIVERSARY cutiee🌸🌷</p>
-
-  <!-- signature at end (bottom-right of page content) -->
-  <p class="signature">From your most loving bf</p>
-
-  <!-- audio file (place song as song.mp3 in repo) -->
-  <audio id="bg-music" loop style="display:none;">
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    /***** Play/pause button logic (works on mobile after user interacts) *****/
-    const playBtn = document.getElementById('play-btn');
-    const music = document.getElementById('bg-music');
-
-    playBtn.addEventListener('click', () => {
-      if (music.paused) {
-        music.play().catch(()=>{/* autoplay blocked in some cases; user initiated click should work */});
-        playBtn.innerText = '🔇 Pause Song';
-      } else {
-        music.pause();
-        playBtn.innerText = '🎵 Play Song';
-      }
-    });
-
-    /***** Falling lavender petals (purple hearts) across whole document height *****/
-    function createPetal() {
-      const pet = document.createElement('div');
-      pet.className = 'petal';
-      // use a small purple heart or flower emoji for soft effect
-      pet.textContent = '💟'; // purple decorative heart; change to '💜' or '🌸' if you prefer
-      // horizontal position
-      pet.style.left = Math.random() * 100 + 'vw';
-
-      // random size & opacity for variety
-      const scale = 0.9 + Math.random() * 0.9;
-      pet.style.fontSize = (14 * scale) + 'px';
-      pet.style.opacity = (0.6 + Math.random() * 0.4);
-
-      // duration
-      const duration = 3000 + Math.random() * 4200; // ms
-
-      // total page height (so petals fall full page)
-      const pageHeight = document.documentElement.scrollHeight + 200;
-
-      // use Web Animations API for full-page fall
-      pet.animate(
-        [
-          { transform: 'translateY(0px)', opacity: pet.style.opacity },
-          { transform: `translateY(${pageHeight}px)`, opacity: 0 }
-        ],
-        {
-          duration: duration,
-          easing: 'linear',
-          fill: 'forwards'
-        }
-      );
-
-      document.body.appendChild(pet);
-
-      // remove after animation
-      setTimeout(()=> pet.remove(), duration + 100);
-    }
-
-    // create petals periodically, slower cadence for subtlety
-    setInterval(createPetal, 900);
-
-    // small precaution: re-calc pageHeight periodically (if content grows)
-    // not strictly necessary but keeps animation accurate if user scrolls/loads images
-    window.addEventListener('resize', ()=>{/* layout responds automatically */});
-  </script>
-</body>
-</html>
+  <!-- rest of your code remains SAME -->
