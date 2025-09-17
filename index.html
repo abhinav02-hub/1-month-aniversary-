@@ -4,31 +4,28 @@
   <meta charset="UTF-8" />
   <title>Happiest 1st month anniversary ❤️</title>
 
-  <!-- Prevent reader-mode-like layout & make responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 🎀 Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <!-- Dancing Script font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------- Page basics (lavender theme) ---------- */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f3e8ff, #e0d4ff); /* soft lavender gradient */
+      background: linear-gradient(135deg, #f3e8ff, #e0d4ff);
       text-align: center;
-      overflow-y: auto; /* allow scrolling for long text */
+      overflow-y: auto;
       position: relative;
       color: #2b2233;
     }
 
-    /* faded centered background image (optional) */
     .bg-image {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      opacity: 0.35; /* very subtle fade */
+      opacity: 0.35;
       z-index: 0;
       max-width: 80%;
       height: auto;
@@ -38,13 +35,12 @@
     h1 {
       margin-top: 36px;
       font-size: 2.6rem;
-      color: #5a2d7e; /* lavender/dark accent */
+      color: #5a2d7e;
       position: relative;
       z-index: 1;
-      font-family: 'Dancing Script', cursive; /* 🎀 new font only for heading */
+      font-family: 'Dancing Script', cursive; /* ✅ Dancing Script */
     }
 
-    /* ---------- Gallery & images ---------- */
     .gallery img {
       width: 220px;
       max-width: 90%;
@@ -57,9 +53,11 @@
       height: auto;
       display: inline-block;
     }
-    .gallery img:hover { transform: scale(1.03); box-shadow: 0 10px 22px rgba(66,18,122,0.16); }
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 22px rgba(66,18,122,0.16);
+    }
 
-    /* ---------- Falling petals (lavender hearts) ---------- */
     .petal {
       position: absolute;
       top: -40px;
@@ -70,7 +68,6 @@
       filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
     }
 
-    /* ---------- Play button (heartbeat) ---------- */
     #play-btn {
       padding: 10px 22px;
       border: none;
@@ -94,7 +91,6 @@
       100% { transform: scale(1); }
     }
 
-    /* ---------- Paragraphs & responsiveness ---------- */
     p {
       position: relative;
       z-index: 1;
@@ -102,14 +98,12 @@
       margin: 14px auto;
       font-size: 1.05rem;
       line-height: 1.5;
-      padding: 0 14px; /* mobile gutter */
+      padding: 0 14px;
       color: #2b2233;
     }
 
-    /* small decorative divider for spacing before pics */
     .spacer { height: 10px; }
 
-    /* ---------- Signature bottom-right of page content ---------- */
     .signature {
       text-align: right;
       margin-right: 20px;
@@ -119,13 +113,10 @@
       color: #5a2d7e;
       position: relative;
       z-index: 1;
-      font-family: 'Dancing Script', cursive; /* 🎀 optional: also in cursive */
     }
 
-    /* ensure images & content do not trigger overflow horizontally */
     img, button { max-width: 100%; box-sizing: border-box; }
 
-    /* small screens: slightly reduce heading size */
     @media (max-width: 420px) {
       h1 { font-size: 1.9rem; margin-top: 24px; }
       .gallery img { width: 180px; }
@@ -134,4 +125,83 @@
   </style>
 </head>
 <body>
-  <!-- rest of your code remains SAME -->
+
+  <img src="bg.png" alt="Lavender background" class="bg-image">
+
+  <h1>Happiest 1st month anniversary ❤️</h1>
+
+  <div style="text-align:center; margin: 12px 0; position: relative; z-index:1;">
+    <button id="play-btn">🎵 Play Song</button>
+  </div>
+
+  <p>
+    Since we started dating from then till now I am still not able to process...
+  </p>
+
+  <div class="spacer"></div>
+  <div class="gallery" aria-label="two-pictures">
+    <img src="pic1.png" alt="Memory 1">
+  </div>
+
+  <p>
+    Teri aankhein the most prettiest I have ever seen✨🪐...
+  </p>
+
+  <p style="margin-top: 6px; font-weight:600;">I love you cheshtha❤️ and once againn HAPPIEST 1st MONTH ANNIVERSARY cutiee🌸🌷</p>
+
+  <p class="signature">From your most loving bf</p>
+
+  <audio id="bg-music" loop style="display:none;">
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const playBtn = document.getElementById('play-btn');
+    const music = document.getElementById('bg-music');
+
+    playBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(()=>{});
+        playBtn.innerText = '🔇 Pause Song';
+      } else {
+        music.pause();
+        playBtn.innerText = '🎵 Play Song';
+      }
+    });
+
+    function createPetal() {
+      const pet = document.createElement('div');
+      pet.className = 'petal';
+      pet.textContent = '💟';
+      pet.style.left = Math.random() * 100 + 'vw';
+
+      const scale = 0.9 + Math.random() * 0.9;
+      pet.style.fontSize = (14 * scale) + 'px';
+      pet.style.opacity = (0.6 + Math.random() * 0.4);
+
+      // ✅ Slower speed: increase duration
+      const duration = 7000 + Math.random() * 5000;
+
+      // ✅ Fixed viewport height so page doesn’t grow
+      const pageHeight = window.innerHeight + 100;
+
+      pet.animate(
+        [
+          { transform: 'translateY(0px)', opacity: pet.style.opacity },
+          { transform: `translateY(${pageHeight}px)`, opacity: 0 }
+        ],
+        {
+          duration: duration,
+          easing: 'linear',
+          fill: 'forwards'
+        }
+      );
+
+      document.body.appendChild(pet);
+      setTimeout(()=> pet.remove(), duration + 100);
+    }
+
+    setInterval(createPetal, 1200); // a bit slower spawn rate too
+  </script>
+</body>
+</html>
